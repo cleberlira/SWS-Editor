@@ -1,0 +1,31 @@
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://unifacs.edu/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://unifacs.edu/">
+<wsdl:types>...</wsdl:types>
+<wsdl:message name="obterWebServiceWebSoapIn">
+<wsdl:part name="parameters" element="tns:obterWebServiceWeb"/>
+</wsdl:message>
+<wsdl:message name="obterWebServiceWebSoapOut">
+<wsdl:part name="parameters" element="tns:obterWebServiceWebResponse"/>
+</wsdl:message>
+<wsdl:portType name="ObtencaoWebServiceWebSoap">...</wsdl:portType>
+<wsdl:binding name="ObtencaoWebServiceWebSoap" type="tns:ObtencaoWebServiceWebSoap">...</wsdl:binding>
+<wsdl:binding name="ObtencaoWebServiceWebSoap12" type="tns:ObtencaoWebServiceWebSoap">
+<soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+<wsdl:operation name="obterWebServiceWeb">
+<soap12:operation soapAction="http://unifacs.edu/obterWebServiceWeb" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+</wsdl:binding>
+<wsdl:service name="ObtencaoWebServiceWeb">
+<wsdl:port name="ObtencaoWebServiceWebSoap" binding="tns:ObtencaoWebServiceWebSoap">
+<soap:address location="http://localhost:50323/ObtencaoWebServiceWeb.asmx"/>
+</wsdl:port>
+<wsdl:port name="ObtencaoWebServiceWebSoap12" binding="tns:ObtencaoWebServiceWebSoap12">
+<soap12:address location="http://localhost:50323/ObtencaoWebServiceWeb.asmx"/>
+</wsdl:port>
+</wsdl:service>
+</wsdl:definitions>

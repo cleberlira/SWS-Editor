@@ -1,0 +1,36 @@
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://unifacs.edu/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://unifacs.edu/">
+<wsdl:types>...</wsdl:types>
+<wsdl:message name="obterOntologiaWebSoapIn">
+<wsdl:part name="parameters" element="tns:obterOntologiaWeb"/>
+</wsdl:message>
+<wsdl:message name="obterOntologiaWebSoapOut">
+<wsdl:part name="parameters" element="tns:obterOntologiaWebResponse"/>
+</wsdl:message>
+<wsdl:portType name="ObtencaoOntologiaWebSoap">
+<wsdl:operation name="obterOntologiaWeb">
+<wsdl:input message="tns:obterOntologiaWebSoapIn"/>
+<wsdl:output message="tns:obterOntologiaWebSoapOut"/>
+</wsdl:operation>
+</wsdl:portType>
+<wsdl:binding name="ObtencaoOntologiaWebSoap" type="tns:ObtencaoOntologiaWebSoap">
+<soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+<wsdl:operation name="obterOntologiaWeb">
+<soap:operation soapAction="http://unifacs.edu/obterOntologiaWeb" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+</wsdl:binding>
+<wsdl:binding name="ObtencaoOntologiaWebSoap12" type="tns:ObtencaoOntologiaWebSoap">...</wsdl:binding>
+<wsdl:service name="ObtencaoOntologiaWeb">
+<wsdl:port name="ObtencaoOntologiaWebSoap" binding="tns:ObtencaoOntologiaWebSoap">
+<soap:address location="http://localhost:50323/ObtencaoOntologiaWeb.asmx"/>
+</wsdl:port>
+<wsdl:port name="ObtencaoOntologiaWebSoap12" binding="tns:ObtencaoOntologiaWebSoap12">
+<soap12:address location="http://localhost:50323/ObtencaoOntologiaWeb.asmx"/>
+</wsdl:port>
+</wsdl:service>
+</wsdl:definitions>
