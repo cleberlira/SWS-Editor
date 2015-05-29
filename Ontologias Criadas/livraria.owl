@@ -1,0 +1,205 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://example.edu.unifacs/ontologies"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://example.edu.unifacs/ontologies">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Esta ontologia representa a descrição do serviço de uma Livraria</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Agent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Book"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Categorization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Publication"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RequestGetbookList"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ServiceUser"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Technology"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#bookList"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Concept"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Publication"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#getBookList"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Publication"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Publication"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Book"/>
+        <Class IRI="#Publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organization"/>
+        <Class IRI="#Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Person"/>
+        <Class IRI="#Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceUser"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Technology"/>
+        <Class IRI="#Categorization"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#bookList"/>
+        <NamedIndividual IRI="#getBookList"/>
+    </ClassAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Agent</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">An agent (eg. person, organization, software or physical artifact).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Agent</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Book</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A Book</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Book</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Book</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Categorization</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Category of existing books (e.g. Technology, Engineering)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Categorization</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Categorization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Organization</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">An Organization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Organization</IRI>
+        <IRI>http://xmlns.com/foaf/0.1/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Organization</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Organization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Person</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A Person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Person</IRI>
+        <IRI>http://xmlns.com/foaf/0.1/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Person</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Publication</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">An publication (eg. book, paper,journal).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Publication</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Publication</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RequestGetbookList</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Request books available in a category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RequestGetbookList</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">RequestGetbookList</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ServiceUser</IRI>
+        <IRI>/livraria.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Technology</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Technology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#bookList</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">List of books available in a category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#getBookList</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">bookList</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.co-ode.org/ontologies/ont.owl#Concept</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Concept</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
