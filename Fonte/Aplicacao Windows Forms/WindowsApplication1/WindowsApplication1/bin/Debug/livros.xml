@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:description xmlns:wsdl="http://www.w3.org/ns/wsdl"
+   targetNamespace="http://www.bookstore.org/booklist/wsdl"
+   xmlns:tns="http://www.bookstore.org/booklist/wsdl"
+   xmlns:whttp="http://www.w3.org/ns/wsdl/http"
+   xmlns:wsdlx="http://www.w3.org/ns/wsdl-extensions"
+   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+   xmlns:msg="http://www.bookstore.org/booklist/xsd"
+    xmlns:sawsdl="http://www.w3.org/ns/sawsdl"
+   >
+  <wsdl:documentation>
+     This is a WSDL 2.0 description of a sample bookstore service
+     listing for obtaining book information.
+  </wsdl:documentation>
+     . . .
+  <wsdl:interface name="BookListInterface" sawsdl:modelReference="http://example.org/categorization/books/technologies">
+    <wsdl:operation name="getBookList"   sawsdl:modelReference="http://example.org/spec/ontology/bookList#RequestbookList"
+       pattern="http://www.w3.org/ns/wsdl/in-out"
+       style="http://www.w3.org/ns/wsdl/style/iri" 
+       wsdlx:safe="true">
+      <wsdl:documentation>
+         This operation returns a list of books.
+      </wsdl:documentation>
+      <wsdl:input element="msg:getBookList"/>
+      <wsdl:output element="msg:bookList"/>
+    </wsdl:operation>
+  </wsdl:interface>
+
+  <wsdl:binding name="BookListHTTPBinding"
+     type="http://www.w3.org/ns/wsdl/http"
+     interface="tns:BookListInterface">
+    <wsdl:documentation>
+       The RESTful HTTP binding for the book list service.
+    </wsdl:documentation>
+    <wsdl:operation ref="tns:getBookList" whttp:method="GET" sawsdl:modelReference="http://example.org/spec/ontology/GetbookList#RequestGetbookList"/>
+  </wsdl:binding>
+...
+</wsdl:description>
