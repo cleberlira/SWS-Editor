@@ -35,7 +35,13 @@
         <Class IRI="#Categorization"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Engineering"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Paper"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Person"/>
@@ -73,8 +79,16 @@
         <Class IRI="#Publication"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Engineering"/>
+        <Class IRI="#Categorization"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Organization"/>
         <Class IRI="#Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Paper"/>
+        <Class IRI="#Categorization"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Person"/>
@@ -118,9 +132,24 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">Category of existing books (e.g. Technology, Engineering)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Categorization</IRI>
+        <IRI>http://xmlns.com/foaf/0.1/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Categorization</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Categorization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Engineering</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Engineering Books</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Engineering</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Engineering</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -136,6 +165,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Organization</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Organization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Paper</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Paper</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -178,6 +212,11 @@
         <IRI>/livraria.owl</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Technology</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Technology Books</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Technology</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Technology</Literal>
@@ -186,6 +225,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#bookList</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">List of books available in a category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#bookList</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">BookList</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
