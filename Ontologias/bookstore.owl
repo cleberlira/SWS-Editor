@@ -21,9 +21,10 @@
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://xmlns.com/foaf/0.1/</Import>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Esta ontologia representa a descrição do serviço de uma Livraria</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This ontology is the service description of a Bookstore</Literal>
     </Annotation>
     <Declaration>
         <Class IRI="#Agent"/>
