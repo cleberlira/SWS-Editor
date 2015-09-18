@@ -1,0 +1,3 @@
+[22:21:55] Paulo Caetano da silva: A semantic annotation tool for Web Services based on REST
+[22:22:01] cleber jorge lira de santana: entendi
+[22:22:53] Paulo Caetano da silva: Semantic annotation on web services based on REST
